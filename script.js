@@ -82,6 +82,8 @@ function showResult() {
 function showCalculator() {
   document.querySelector('.front-page').style.display = 'flex';
   document.querySelector('.result-page').style.display = 'none';
+  document.getElementById('resultText').innerText = '';
+  document.getElementById('ageImage').style.display = 'none';
 }
 
 document.addEventListener('DOMContentLoaded', function() {
