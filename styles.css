@@ -12,14 +12,13 @@ body {
   height: 100vh;
 }
 
-/* Title image styles */
 .title-image {
   text-align: center;
   margin-bottom: 20px;
 }
 
 .title-image img {
-  max-width: 100%;
+  max-width: 100%; /* Make the image responsive */
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
