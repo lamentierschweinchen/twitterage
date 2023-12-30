@@ -79,7 +79,12 @@ function showResult() {
   document.querySelector('.result-page').style.display = 'block';
 }
 
+function showCalculator() {
+  document.querySelector('.front-page').style.display = 'flex';
+  document.querySelector('.result-page').style.display = 'none';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('button').addEventListener('click', showResult);
-  document.querySelector('button:nth-of-type(2)').addEventListener('click', showCalculator);
+  document.getElementById('calculateBtn').addEventListener('click', showResult);
+  document.getElementById('tryAgainBtn').addEventListener('click', showCalculator);
 });
