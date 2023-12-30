@@ -47,47 +47,43 @@ function getBehaviorDescription(twitterAge) {
 function calculateTwitterAge() {
   const actualAge = parseInt(document.getElementById('actualAge').value);
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
-  document.querySelector('.result').style.display = 'block';
-
 
   if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
-    document.getElementById('result').innerText = 'Please enter valid numbers.';
+    document.getElementById('resultText').innerText = 'Please enter valid numbers.';
     return;
   }
 
   const twitterAge = actualAge / twitterYears;
 
-  const roundedAge = Math.round(twitterAge); // Round the calculated age
-  const behaviorInfo = getBehaviorDescription(roundedAge); // Use rounded age for behavior description
+  const roundedAge = Math.round(twitterAge);
+  const behaviorInfo = getBehaviorDescription(roundedAge);
 
   const behaviorText = behaviorInfo.behavior;
   const imageSource = behaviorInfo.imageSrc;
 
-  document.getElementById('result').innerText = `Congratulations! Your Twitter age is approximately ${roundedAge} years old.`;
+  document.getElementById('resultText').innerText = `Congratulations! Your Twitter age is approximately ${roundedAge} years old.`;
 
   const ageImage = document.getElementById('ageImage');
   if (imageSource) {
     ageImage.style.display = 'block';
     ageImage.src = imageSource;
 
-    // Display the behavior text next to the image
     document.getElementById('behaviorText').innerText = behaviorText;
   } else {
     ageImage.style.display = 'none';
-    document.getElementById('behaviorText').innerText = ''; // Clear behavior text if no image
+    document.getElementById('behaviorText').innerText = '';
   }
 
-  // Hide the title image once the result is displayed
   document.getElementById('titleImage').style.display = 'none';
+  document.querySelector('.result').style.display = 'block';
 }
 
 function resetCalculator() {
-  document.getElementById('result').innerText = '';
+  document.getElementById('resultText').innerText = '';
   document.getElementById('ageImage').style.display = 'none';
   document.getElementById('behaviorText').innerText = '';
   document.getElementById('titleImage').style.display = 'block';
   document.querySelector('.result').style.display = 'none';
-
 
   document.getElementById('actualAge').value = '';
   document.getElementById('twitterYears').value = '';
