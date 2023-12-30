@@ -79,4 +79,7 @@ function showResult() {
   document.querySelector('.result-page').style.display = 'block';
 }
 
-document.getElementById('tryAgainBtn').addEventListener('click', showCalculator);
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('button').addEventListener('click', showResult);
+  document.querySelector('button:nth-of-type(2)').addEventListener('click', showCalculator);
+});
