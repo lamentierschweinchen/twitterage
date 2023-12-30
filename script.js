@@ -60,7 +60,7 @@ function calculateTwitterAge() {
   const behaviorText = behaviorInfo.behavior;
   const imageSource = behaviorInfo.imageSrc;
 
-  document.getElementById('result').innerText = `Congratulations! Your Twitter age is approximately ${roundedAge} years old. ${behaviorText}`;
+  document.getElementById('result').innerText = `Your Twitter age is approximately ${roundedAge}. ${behaviorText}`;
 
   const ageImage = document.getElementById('ageImage');
   if (imageSource) {
