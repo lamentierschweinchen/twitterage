@@ -2,19 +2,13 @@ function calculateTwitterAge() {
   const actualAge = parseInt(document.getElementById('actualAge').value);
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
 
-  if (isNaN(actualAge) || isNaN(twitterYears)) {
+  if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
     document.getElementById('result').innerText = 'Please enter valid numbers.';
     return;
   }
 
-  if (twitterYears >= actualAge) {
-    document.getElementById('result').innerText = 'Invalid input: Twitter years exceed or equal actual age.';
-    return;
-  }
-
-  const twitterAge = actualAge / (actualAge - twitterYears);
-  const behavior = getBehaviorDescription(twitterAge);
-  document.getElementById('result').innerText = `Your Twitter age is approximately ${twitterAge.toFixed(2)} years old. ${behavior}`;
+  const twitterAge = actualAge / twitterYears;
+  document.getElementById('result').innerText = `Your Twitter age is approximately ${twitterAge.toFixed(2)} years old.`;
 }
 
 function getBehaviorDescription(twitterAge) {
