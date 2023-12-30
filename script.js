@@ -54,7 +54,7 @@ function showResult() {
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
 
   if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
-    document.getElementById('result').innerText = 'Please enter valid numbers.';
+    document.getElementById('resultText').innerText = 'Please enter valid numbers.';
     return;
   }
 
@@ -65,12 +65,12 @@ function showResult() {
   const behaviorText = behaviorInfo.behavior;
   const imageSource = behaviorInfo.imageSrc;
 
-  document.getElementById('result').innerText = `Your Twitter age is approximately ${roundedAge}. ${behaviorText}`;
+  document.getElementById('resultText').innerText = behaviorText;
 
   const ageImage = document.getElementById('ageImage');
   if (imageSource) {
-    ageImage.style.display = 'block';
     ageImage.src = imageSource;
+    ageImage.style.display = 'block';
   } else {
     ageImage.style.display = 'none';
   }
