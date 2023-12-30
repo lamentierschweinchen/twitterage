@@ -67,7 +67,8 @@ body {
 }
 
 /* Input and button styles */
-input[type="number"], button {
+input[type="number"],
+button {
   padding: 12px 20px; /* Bigger padding for input boxes */
   margin: 10px; /* Adjusting margin */
   border-radius: 6px; /* Slight border radius */
@@ -93,4 +94,32 @@ button:hover {
 /* Hiding the calculator on result page */
 .result-page .calculator {
   display: none;
+}
+
+/* Existing CSS */
+.image-container {
+  text-align: center; /* Center the image and text */
+  position: relative; /* Enable positioning for behavior text */
+}
+
+#ageImage {
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Add margin at the bottom for spacing */
+}
+
+/* Adjust text style and margin */
+#resultText {
+  font-size: 18px;
+  margin-bottom: 20px; /* Separate the text from the image */
+}
+
+/* Position behavior text */
+#behaviorText {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  text-align: center; /* Center behavior text horizontally */
 }
