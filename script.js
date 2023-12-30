@@ -25,6 +25,10 @@ function getBehaviorDescription(twitterAge) {
 }
 
 function calculateTwitterAge() {
+  function calculateTwitterAge() {
+  console.log('Calculate button clicked.'); // Add this line
+  // ... rest of the function code
+}
   const actualAge = parseInt(document.getElementById('actualAge').value);
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
 
