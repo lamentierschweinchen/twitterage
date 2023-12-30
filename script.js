@@ -1,8 +1,24 @@
-function getBehaviorDescription(twitterAge) {
+function calculateTwitterAge() {
+  const actualAge = parseFloat(document.getElementById('actualAge').value);
+  const twitterYears = parseFloat(document.getElementById('twitterYears').value);
+  const resultText = document.getElementById('resultText');
+  const ageImage = document.getElementById('ageImage');
+  const behaviorText = document.getElementById('behaviorText');
+  const resultContainer = document.querySelector('.result');
+
+  if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
+    resultText.innerText = 'Please enter valid numbers.';
+    resultContainer.style.display = 'block';
+    ageImage.style.display = 'none';
+    behaviorText.innerText = '';
+    return;
+  }
+
+  const twitterAge = actualAge / twitterYears;
+  const roundedAge = Math.round(twitterAge);
+
   let behavior = '';
   let imageSrc = '';
-
-  const roundedAge = Math.round(twitterAge);
 
   if (roundedAge <= 1) {
     behavior = "You're tweeting like a crying baby, throwing tantrums with each tweet!";
@@ -36,55 +52,17 @@ function getBehaviorDescription(twitterAge) {
     imageSrc = 'images/wise.jpg';
   }
 
-  const result = {
-    behavior: behavior,
-    imageSrc: imageSrc
-  };
-
-  return result;
-}
-
-function calculateTwitterAge() {
-  const actualAge = parseInt(document.getElementById('actualAge').value);
-  const twitterYears = parseInt(document.getElementById('twitterYears').value);
-
-  if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
-    document.getElementById('resultText').innerText = 'Please enter valid numbers.';
-    return;
-  }
-
-  const twitterAge = actualAge / twitterYears;
-
-  const roundedAge = Math.round(twitterAge);
-  const behaviorInfo = getBehaviorDescription(roundedAge);
-
-  const behaviorText = behaviorInfo.behavior;
-  const imageSource = behaviorInfo.imageSrc;
-
-  document.getElementById('resultText').innerText = `Congratulations! Your Twitter age is approximately ${roundedAge} years old.`;
-
-  const ageImage = document.getElementById('ageImage');
-  if (imageSource) {
-    ageImage.style.display = 'block';
-    ageImage.src = imageSource;
-
-    document.getElementById('behaviorText').innerText = behaviorText;
-  } else {
-    ageImage.style.display = 'none';
-    document.getElementById('behaviorText').innerText = '';
-  }
-
-  document.getElementById('titleImage').style.display = 'none';
-  document.querySelector('.result').style.display = 'block';
+  resultText.innerText = `Your Twitter age is approximately ${roundedAge}.`;
+  ageImage.src = imageSrc;
+  behaviorText.innerText = behavior;
+  resultContainer.style.display = 'block';
 }
 
 function resetCalculator() {
-  document.getElementById('resultText').innerText = '';
-  document.getElementById('ageImage').style.display = 'none';
-  document.getElementById('behaviorText').innerText = '';
-  document.getElementById('titleImage').style.display = 'block';
-  document.querySelector('.result').style.display = 'none';
-
   document.getElementById('actualAge').value = '';
   document.getElementById('twitterYears').value = '';
+  document.getElementById('resultText').innerText = '';
+  document.getElementById('ageImage').src = '';
+  document.getElementById('behaviorText').innerText = '';
+  document.querySelector('.result').style.display = 'none';
 }
