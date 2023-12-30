@@ -43,4 +43,34 @@ p#result {
   color: #333;
 }
 
-/* You can adjust the colors further to fit your preference */
+/* Additional Styles */
+input[type="number"]::placeholder {
+  color: #aaa;
+}
+
+input[type="number"]:focus,
+button:focus {
+  outline: none;
+}
+
+/* New Styles */
+body {
+  background-color: #000;
+}
+
+.calculator {
+  background-color: #fff;
+  color: #000;
+}
+
+button {
+  background-color: #00aaff;
+}
+
+button:hover {
+  background-color: #0088cc;
+}
+
+p#result {
+  color: #fff;
+}
