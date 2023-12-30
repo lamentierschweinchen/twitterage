@@ -2,13 +2,15 @@ function getBehaviorDescription(twitterAge) {
   let behavior = '';
   let imageSrc = '';
 
-  if (twitterAge <= 5) {
+  const roundedAge = Math.round(twitterAge); // Round the calculated age
+
+  if (roundedAge <= 5) {
     behavior = "You're throwing Twitter tantrums like a toddler denied their favorite toy!";
     imageSrc = 'images/toddler.jpg'; // Update path to toddler image
-  } else if (twitterAge > 5 && twitterAge <= 10) {
+  } else if (roundedAge > 5 && roundedAge <= 10) {
     behavior = "You're the petulant prince/princess of Twitter, always wanting attention and retweets!";
     imageSrc = 'images/kid.jpg'; // Update path to kid image
-  } else if (twitterAge > 10 && twitterAge <= 15) {
+  } else if (roundedAge > 10 && roundedAge <= 15) {
     behavior = "Your tweets are a whirlwind of teenage rebellion and immaturity!";
     imageSrc = 'images/teenager.jpg'; // Update path to teenager image
   }
@@ -32,16 +34,20 @@ function calculateTwitterAge() {
   }
 
   const twitterAge = actualAge / twitterYears;
-  const behaviorInfo = getBehaviorDescription(twitterAge);
+
+  const roundedAge = Math.round(twitterAge); // Round the calculated age
+  const behaviorInfo = getBehaviorDescription(roundedAge); // Use rounded age for behavior description
+
   const behaviorText = behaviorInfo.behavior;
   const imageSource = behaviorInfo.imageSrc;
 
-  document.getElementById('result').innerText = `Your Twitter age is approximately ${twitterAge.toFixed(2)} years old. ${behaviorText}`;
+  document.getElementById('result').innerText = `Your Twitter age is approximately ${roundedAge} years old. ${behaviorText}`;
 
   const ageImage = document.getElementById('ageImage');
   if (imageSource) {
     ageImage.style.display = 'block';
     ageImage.src = imageSource;
+    ageImage.style.maxWidth = '80%'; // Adjusted image display size
   } else {
     ageImage.style.display = 'none';
   }
