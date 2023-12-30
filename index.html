@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter Age Calculator</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
-  <div class="container front-page">
+  <div class="container">
     <div class="title-image">
-      <img id="titleImage" src="images/titleimage.jpg" alt="Twitter Age Calculator Title Image">
+      <img src="titleimage.jpg" alt="Twitter Age Calculator" id="titleImage">
     </div>
+
     <div class="calculator">
-      <h1>What's your Twitter age?</h1>
+      <h1>What is your Twitter age?</h1>
       <label for="actualAge">Your age</label>
-      <input type="number" id="actualAge">
+      <input type="number" id="actualAge" placeholder="Enter your age">
+
       <label for="twitterYears">Years on Twitter</label>
-      <input type="number" id="twitterYears">
-      <br>
-      <button onclick="showResult()">Calculate</button>
+      <input type="number" id="twitterYears" placeholder="Enter years on Twitter">
+
+      <button onclick="calculateTwitterAge()">Calculate</button>
+
+      <div id="result" style="display: none;"></div>
+
+      <div class="image-container">
+        <img src="" alt="Twitter Age Image" id="ageImage">
+      </div>
+
+      <button onclick="resetCalculator()" style="display: none;">Try Again</button>
     </div>
   </div>
-
-  <div class="container result-page" style="display: none;">
-    <div class="result">
-      <h2 id="result"></h2>
-      <img id="ageImage" src="" alt="Result Image">
-      <br>
-      <button id="tryAgainBtn">Try Again</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
+
 </html>
