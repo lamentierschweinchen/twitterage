@@ -2,7 +2,7 @@ function getBehaviorDescription(twitterAge) {
   let behavior = '';
   let imageSrc = '';
 
-  const roundedAge = Math.round(twitterAge); // Round the calculated age
+  const roundedAge = Math.round(twitterAge);
 
   if (roundedAge <= 1) {
     behavior = "You're tweeting like a crying baby, throwing tantrums with each tweet!";
@@ -35,6 +35,7 @@ function getBehaviorDescription(twitterAge) {
     behavior = "You're the sage of Twitter, occasionally throwing shade like a well-aged fine wine.";
     imageSrc = 'images/wise.jpg';
   }
+
   const result = {
     behavior: behavior,
     imageSrc: imageSrc
@@ -60,16 +61,30 @@ function calculateTwitterAge() {
   const behaviorText = behaviorInfo.behavior;
   const imageSource = behaviorInfo.imageSrc;
 
-  document.getElementById('result').innerText = `Your Twitter age is approximately ${roundedAge}. ${behaviorText}`;
+  document.getElementById('result').innerText = `Congratulations! Your Twitter age is approximately ${roundedAge} years old.`;
 
   const ageImage = document.getElementById('ageImage');
   if (imageSource) {
     ageImage.style.display = 'block';
     ageImage.src = imageSource;
+
+    // Display the behavior text next to the image
+    document.getElementById('behaviorText').innerText = behaviorText;
   } else {
     ageImage.style.display = 'none';
+    document.getElementById('behaviorText').innerText = ''; // Clear behavior text if no image
   }
 
   // Hide the title image once the result is displayed
   document.getElementById('titleImage').style.display = 'none';
+}
+
+function resetCalculator() {
+  document.getElementById('result').innerText = '';
+  document.getElementById('ageImage').style.display = 'none';
+  document.getElementById('behaviorText').innerText = '';
+  document.getElementById('titleImage').style.display = 'block';
+
+  document.getElementById('actualAge').value = '';
+  document.getElementById('twitterYears').value = '';
 }
