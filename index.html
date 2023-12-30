@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter Age Calculator</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -38,7 +37,7 @@
 
   <script>
     function getBehaviorDescription(twitterAge) {
-      // Behavior description function remains unchanged
+      // Your existing function remains unchanged
     }
 
     function calculateTwitterAge() {
@@ -72,7 +71,7 @@
       }
 
       document.getElementById('titleImage').style.display = 'none';
-      document.querySelector('.result').style.display = 'block'; // Show the result section
+      document.querySelector('.result').style.display = 'block';
     }
 
     function resetCalculator() {
@@ -80,14 +79,12 @@
       document.getElementById('ageImage').style.display = 'none';
       document.getElementById('behaviorText').innerText = '';
       document.getElementById('titleImage').style.display = 'block';
-      document.querySelector('.result').style.display = 'none'; // Hide the result section
+      document.querySelector('.result').style.display = 'none';
 
       document.getElementById('actualAge').value = '';
       document.getElementById('twitterYears').value = '';
     }
   </script>
-
-  <!-- Rest of your CSS -->
 </body>
 
 </html>
