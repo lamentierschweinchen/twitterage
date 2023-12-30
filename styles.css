@@ -1,8 +1,8 @@
 /* Body styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1e90ff; /* Update to your desired background color */
-  color: white; /* Set text color to white */
+  background-color: #1e90ff;
+  color: white;
   margin: 0;
   padding: 0;
   display: flex;
@@ -12,6 +12,7 @@ body {
   height: 100vh;
 }
 
+/* Title image styles */
 .title-image {
   text-align: center;
   margin-bottom: 20px;
@@ -22,6 +23,8 @@ body {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: block; /* Ensure the image is a block element */
+  margin: auto; /* Center the image */
 }
 
 /* Calculator styles */
