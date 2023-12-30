@@ -47,6 +47,8 @@ function getBehaviorDescription(twitterAge) {
 function calculateTwitterAge() {
   const actualAge = parseInt(document.getElementById('actualAge').value);
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
+  document.querySelector('.result').style.display = 'block';
+
 
   if (isNaN(actualAge) || isNaN(twitterYears) || twitterYears === 0) {
     document.getElementById('result').innerText = 'Please enter valid numbers.';
@@ -84,6 +86,8 @@ function resetCalculator() {
   document.getElementById('ageImage').style.display = 'none';
   document.getElementById('behaviorText').innerText = '';
   document.getElementById('titleImage').style.display = 'block';
+  document.querySelector('.result').style.display = 'none';
+
 
   document.getElementById('actualAge').value = '';
   document.getElementById('twitterYears').value = '';
