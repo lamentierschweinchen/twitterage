@@ -7,11 +7,12 @@
 </head>
 <body>
   <div class="calculator">
-    <input type="number" id="actualAge" placeholder="Enter actual age">
-    <input type="number" id="twitterYears" placeholder="Enter years on Twitter">
+    <h1>What is your Twitter age?</h1> <!-- Updated banner -->
+    <input type="number" id="actualAge" placeholder="Your age"> <!-- Updated prompt -->
+    <input type="number" id="twitterYears" placeholder="Years on Twitter"> <!-- Updated prompt -->
     <button onclick="calculateTwitterAge()">Calculate</button>
-    <p id="result"></p>
-    <img id="ageImage" src="" alt="Age Group Image" style="max-width: 100%; display: none;">
+    <p id="result">Congratulations! Your Twitter age is...</p> <!-- Updated result text -->
+    <img id="ageImage" src="" alt="Age Group Image" style="max-width: 80%; display: none;">
   </div>
 
   <script src="script.js"></script>
