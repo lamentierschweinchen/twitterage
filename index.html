@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container front-page">
     <div class="title-image">
       <img src="titleimage.jpg" alt="Twitter Age Calculator" id="titleImage">
     </div>
@@ -23,15 +23,19 @@
       <label for="twitterYears">Years on Twitter</label>
       <input type="number" id="twitterYears" placeholder="Enter years on Twitter">
 
-      <button onclick="calculateTwitterAge()">Calculate</button>
+      <button id="calculateBtn">Calculate</button>
+    </div>
+  </div>
 
+  <div class="container result-page" style="display: none;">
+    <div class="result">
       <div id="result" style="display: none;"></div>
 
       <div class="image-container">
         <img src="" alt="" id="ageImage">
       </div>
 
-      <button onclick="resetCalculator()" style="display: none;">Try Again</button>
+      <button id="tryAgainBtn">Try Again</button>
     </div>
   </div>
 </body>
