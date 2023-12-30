@@ -12,19 +12,25 @@ function calculateTwitterAge() {
 }
 
 function getBehaviorDescription(twitterAge) {
+  let behavior = '';
+  let imageSrc = '';
+
   if (twitterAge <= 5) {
-    return "You're throwing Twitter tantrums like a toddler denied their favorite toy!";
+    behavior = "You're throwing Twitter tantrums like a toddler denied their favorite toy!";
+    imageSrc = 'images/toddler.jpg'; // Path to the toddler image
   } else if (twitterAge > 5 && twitterAge <= 10) {
-    return "You're the petulant prince/princess of Twitter, always wanting attention and retweets!";
+    behavior = "You're the petulant prince/princess of Twitter, always wanting attention and retweets!";
+    imageSrc = 'images/prince_princess.jpg'; // Path to the prince/princess image
   } else if (twitterAge > 10 && twitterAge <= 15) {
-    return "Your tweets are a whirlwind of teenage rebellion and immaturity!";
-  } else if (twitterAge > 15 && twitterAge <= 18) {
-    return "You're a walking contradiction on Twitter - part adult, part teenager, and all drama!";
-  } else if (twitterAge > 18 && twitterAge <= 30) {
-    return "Your Twitter antics are the epitome of youthful exuberance and occasional immaturity!";
-  } else if (twitterAge > 30 && twitterAge <= 50) {
-    return "Your Twitter presence combines wisdom with occasional 'back in my day' rants!";
-  } else {
-    return "You're the sage of Twitter, occasionally throwing shade like a well-aged fine wine.";
+    behavior = "Your tweets are a whirlwind of teenage rebellion and immaturity!";
+    imageSrc = 'images/teen_rebellion.jpg'; // Path to the teen rebellion image
   }
+  // ... (other behavior descriptions)
+
+  const result = {
+    behavior: behavior,
+    imageSrc: imageSrc
+  };
+
+  return result;
 }
