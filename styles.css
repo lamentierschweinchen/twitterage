@@ -3,79 +3,123 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #1e90ff; /* Restoring the light blue background */
+  color: white;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
+/* Title Image */
 .title-image {
   max-width: 100%;
-  margin-bottom: 20px;
+  height: auto;
 }
 
-h1 {
-  font-size: 24px;
-  margin-bottom: 15px;
+/* Result Image */
+#ageImage {
+  max-width: 60%; /* Adjusted width for the result image */
+  height: auto;
+  border-radius: 8px; /* Adding border radius for some styling */
+  transition: transform 0.3s ease-in-out;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+/* Animations */
+#ageImage:hover {
+  transform: scale(1.1);
 }
 
+/* Additional Styles */
+#resultText {
+  font-size: 18px; /* Adjusting font size */
+  padding: 20px 0;
+  animation: fadeInDown 1s;
+}
+
+/* Additional Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Calculator styles */
+.calculator {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px; /* Margin to separate from the title image */
+}
+
+/* Input and button styles */
 input[type="number"],
 button {
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 12px 20px; /* Bigger padding for input boxes */
+  margin: 10px; /* Adjusting margin */
+  border-radius: 6px; /* Slight border radius */
+  border: none;
+  font-size: 16px;
 }
 
 button {
   cursor: pointer;
-  background-color: #1e90ff;
-  color: #fff;
-  border: none;
-  transition: background-color 0.3s ease;
+  background-color: #ffffff;
+  color: #1e90ff;
 }
 
 button:hover {
-  background-color: #1464a0;
+  background-color: #eeeeee;
 }
 
-.result {
+/* Try Again button */
+#tryAgainBtn {
   margin-top: 20px;
 }
 
-.result img {
-  max-width: 100%;
-  margin-top: 20px;
-  border-radius: 5px;
-}
-/* Additional Styles */
-.title-image {
-  max-width: 100%;
-  margin-bottom: 20px;
+/* Hiding the calculator on result page */
+.result-page .calculator {
+  display: none;
 }
 
-.result {
-  margin-top: 20px;
+/* Existing CSS */
+.image-container {
+  text-align: center; /* Center the image and text */
+  position: relative; /* Enable positioning for behavior text */
 }
 
-.result img {
-  max-width: 100%;
-  margin-top: 20px;
-  border-radius: 5px;
+#ageImage {
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px; /* Add margin at the bottom for spacing */
 }
 
-.behavior-text {
-  margin-top: 20px;
+/* Adjust text style and margin */
+#resultText {
+  font-size: 18px;
+  margin-bottom: 20px; /* Separate the text from the image */
+}
+
+/* Position behavior text */
+#behaviorText {
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  text-align: center; /* Center behavior text horizontally */
 }
