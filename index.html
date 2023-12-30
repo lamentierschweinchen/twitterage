@@ -6,7 +6,6 @@
   <title>Twitter Age Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-  
 <body>
   <div class="container">
     <img src="titleimage.jpg" alt="Twitter Age Calculator" class="title-image">
@@ -17,11 +16,14 @@
     <label for="twitterYears">Years on Twitter</label>
     <input type="number" id="twitterYears" placeholder="Enter years on Twitter">
     
-    <button onclick="calculateTwitterAge()">Calculate</button>
-    
     <div class="result" style="display: none;">
-      <!-- ... (result content) ... -->
+      <p id="resultText"></p>
+      <img src="" alt="Twitter Age Image" id="ageImage">
+      <p id="behaviorText"></p>
+      <button onclick="resetCalculator()">Try Again</button>
     </div>
+
+    <button onclick="calculateTwitterAge()">Calculate</button>
   </div>
 
   <script src="script.js" defer></script>
