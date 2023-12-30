@@ -60,3 +60,22 @@ button:hover {
   margin-top: 20px;
   border-radius: 5px;
 }
+/* Additional Styles */
+.title-image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.result img {
+  max-width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.behavior-text {
+  margin-top: 20px;
+}
