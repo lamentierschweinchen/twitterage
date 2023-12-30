@@ -1,3 +1,4 @@
+// Function to calculate Twitter age
 function calculateTwitterAge() {
   const actualAge = parseInt(document.getElementById('actualAge').value);
   const twitterYears = parseInt(document.getElementById('twitterYears').value);
@@ -23,6 +24,7 @@ function calculateTwitterAge() {
   ageImage.style.maxWidth = '80%';
 }
 
+// Function to determine behavior description based on age
 function getBehaviorDescription(twitterAge) {
   let behavior = '';
   let imageSrc = '';
@@ -52,3 +54,13 @@ function getBehaviorDescription(twitterAge) {
     imageSrc: imageSrc
   };
 }
+
+// Function to handle Enter key press
+function handleKeyPress(event) {
+  if (event.key === 'Enter') {
+    calculateTwitterAge(); // Call the calculateTwitterAge function on Enter key press
+  }
+}
+
+// Event listener for key press
+document.addEventListener('keypress', handleKeyPress);
