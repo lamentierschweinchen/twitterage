@@ -3,8 +3,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
-  color: #333;
+  background-color: #1e90ff; /* Restoring the light blue background */
+  color: white;
 }
 
 .container {
@@ -52,4 +52,45 @@ body {
   }
 }
 
-/* Additional styles or animations can be added below */
+/* Calculator styles */
+.calculator {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px; /* Margin to separate from the title image */
+}
+
+/* Input and button styles */
+input[type="number"], button {
+  padding: 12px 20px; /* Bigger padding for input boxes */
+  margin: 10px; /* Adjusting margin */
+  border-radius: 6px; /* Slight border radius */
+  border: none;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #1e90ff;
+}
+
+button:hover {
+  background-color: #eeeeee;
+}
+
+/* Try Again button */
+#tryAgainBtn {
+  margin-top: 20px;
+}
+
+/* Hiding the calculator on result page */
+.result-page .calculator {
+  display: none;
+}
