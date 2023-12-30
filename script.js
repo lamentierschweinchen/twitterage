@@ -36,8 +36,16 @@ function getBehaviorDescription(twitterAge) {
   } else if (twitterAge > 10 && twitterAge <= 15) {
     behavior = "Your tweets are a whirlwind of teenage rebellion and immaturity!";
     imageSrc = 'images/teenager.jpg';
-  } 
-  // Add more conditions for other age groups
+  } else if (twitterAge > 15 && twitterAge <= 30) {
+    behavior = "Your Twitter antics are the epitome of youthful exuberance and occasional immaturity!";
+    imageSrc = 'images/young.jpg';
+  } else if (twitterAge > 30 && twitterAge <= 50) {
+    behavior = "Your Twitter presence combines wisdom with occasional 'back in my day' rants!";
+    imageSrc = 'images/mature.jpg';
+  } else {
+    behavior = "You're the sage of Twitter, occasionally throwing shade like a well-aged fine wine.";
+    imageSrc = 'images/wise.jpg';
+  }
 
   return {
     description: behavior,
