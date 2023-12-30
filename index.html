@@ -13,28 +13,7 @@
     <p id="result"></p>
   </div>
 
+  <!-- Ensure the script tag only references the external script file -->
   <script src="script.js"></script>
 </body>
 </html>
-
-JavaScript (script.js)
-
-javascript
-
-function calculateTwitterAge() {
-  const actualAge = parseInt(document.getElementById('actualAge').value);
-  const twitterYears = parseInt(document.getElementById('twitterYears').value);
-
-  if (isNaN(actualAge) || isNaN(twitterYears)) {
-    document.getElementById('result').innerText = 'Please enter valid numbers.';
-    return;
-  }
-
-  if (twitterYears >= actualAge) {
-    document.getElementById('result').innerText = 'Invalid input: Twitter years exceed or equal actual age.';
-    return;
-  }
-
-  const twitterAge = actualAge / (actualAge - twitterYears);
-  document.getElementById('result').innerText = `Your Twitter age is approximately ${twitterAge.toFixed(2)} years old.`;
-}
