@@ -27,6 +27,9 @@ function getBehaviorDescription(twitterAge) {
     imageSrc = 'images/young.jpg'; // Update path to young age image
   } else if (roundedAge > 18 && roundedAge <= 30) {
     behavior = "Your Twitter antics are the epitome of youthful exuberance and occasional immaturity!";
+    imageSrc = 'images/young.jpg'; // Update path to mature age image
+  } else if (roundedAge > 30 && roundedAge <= 45) {
+    behavior = "Your Twitter posting is more focused on clever quips and teaching the youngens than little hissy fits!";
     imageSrc = 'images/mature.jpg'; // Update path to mature age image
   } else {
     behavior = "You're the sage of Twitter, occasionally throwing shade like a well-aged fine wine.";
