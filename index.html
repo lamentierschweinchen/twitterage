@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Twitter Age Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="title-image">
-    <img id="titleImage" src="titleimage.jpg" alt="Title Image">
+  <div class="container front-page">
+    <div class="title-image">
+      <img id="titleImage" src="images/titleimage.jpg" alt="Twitter Age Calculator Title Image">
+    </div>
+    <div class="calculator">
+      <h1>What's your Twitter age?</h1>
+      <label for="actualAge">Your age</label>
+      <input type="number" id="actualAge">
+      <label for="twitterYears">Years on Twitter</label>
+      <input type="number" id="twitterYears">
+      <br>
+      <button onclick="showResult()">Calculate</button>
+    </div>
   </div>
 
-  <div class="calculator">
-    <h1>What is your Twitter age?</h1>
-    <input type="number" id="actualAge" placeholder="Your age">
-    <input type="number" id="twitterYears" placeholder="Years on Twitter">
-    <button onclick="calculateTwitterAge()">Calculate</button>
-    <p id="result"></p>
-    <img id="ageImage" src="" alt="Age Group Image">
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="container
