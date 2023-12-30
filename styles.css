@@ -1,79 +1,55 @@
-/* Body styles */
+/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #1e90ff;
-  color: white;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
-/* Title image styles */
-.title-image {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.title-image img {
-  max-width: 100%; /* Make the image responsive */
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  display: block; /* Ensure the image is a block element */
-  margin: auto; /* Center the image */
-}
-
-/* Calculator styles */
-.calculator {
-  text-align: center;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-/* Input and button styles */
-input[type="number"], button {
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 4px;
-  border: none;
-  font-size: 16px;
-}
-
-button {
-  cursor: pointer;
-  background-color: #ffffff;
-  color: #1e90ff;
-}
-
-button:hover {
-  background-color: #eeeeee;
-}
-
-/* Result text styles */
-#result {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* Image styles */
-#ageImage {
-  max-width: 80%;
-  display: none;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-/* Your existing CSS styles */
-
-/* Adjust image sizes for mobile devices */
-img {
+/* Title Image */
+#titleImage {
   max-width: 100%;
   height: auto;
 }
+
+/* Result Image */
+#ageImage {
+  max-width: 60%; /* Adjusted width for the result image */
+  height: auto;
+  border-radius: 8px; /* Adding border radius for some styling */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Animations */
+#ageImage:hover {
+  transform: scale(1.1);
+}
+
+/* Additional Styles */
+#result {
+  font-size: 18px; /* Adjusting font size */
+  padding: 20px 0;
+  animation: fadeInDown 1s;
+}
+
+/* Additional Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Additional styles or animations can be added below */
